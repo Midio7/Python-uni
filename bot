@@ -1,0 +1,33 @@
+import pyautogui
+import time
+import keyboard
+
+def cautare_google():
+    time.sleep(5)
+    if pyautogui.locateOnScreen(r'D:\forbot\forbot.png', confidence=0.7) != None:
+        camp_google = pyautogui.locateOnScreen(r'D:\forbot\forbot.png', confidence=0.7)
+        pyautogui.click(camp_google)
+        time.sleep(1)
+        pyautogui.write('https://youtube.com')
+        pyautogui.press('enter')
+    else:
+        print("Imaginea nu este :(")
+
+
+def cautare_yt():
+    time.sleep(5)
+    if pyautogui.locateOnScreen(r'D:\forbot\forbot2.png', confidence=0.7) != None:
+        camp_yt = pyautogui.locateOnScreen(r'D:\forbot\forbot2.png', confidence=0.7)
+        pyautogui.click(camp_yt)
+        time.sleep(1)
+        pyautogui.write('arctic monkeys')
+        pyautogui.press('enter')
+    else:
+        print("Imaginea nu este :(")
+
+
+cautare_google()
+cautare_yt()
+
+
+
