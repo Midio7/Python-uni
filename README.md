@@ -1,2 +1,3 @@
 # Python-uni
-bruh
+Cheptanaru Ionut Alexandru
+;-; ;-; ;-; ;-; ;-; ;-; ;-;
