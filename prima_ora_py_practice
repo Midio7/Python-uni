@@ -1,0 +1,79 @@
+lista = [10, 20, 73, 91, 28, 39,50]
+lista.sort()
+print("lista sortata crescator: ", lista)
+lista.sort(reverse = True)
+print("lista sortata descrescator: ", lista)
+
+print("\n")
+print("minimul:", min(lista))
+print("maximul:", max(lista))
+print("\n")
+lista = ["ceva", "cumva", "item", "namideedeitem"]
+print(lista)
+lista.remove("ceva")
+print(lista)
+
+lista.append("itemnou")
+print(lista)
+print("\n")
+print("CALENDAR")
+import calendar
+yy = 2002
+mm = 1
+print(calendar.month(yy,mm))
+print("\n")
+import random
+rezultate_posibile = [1, 2, 3, 4, 5, 6]
+rezultate1 = random.choice(rezultate_posibile)
+print("1st zar: " + str(rezultate1))
+rezultate2 = random.choice(rezultate_posibile)
+print("2nd zar: " + str(rezultate2))
+rezultate3 = random.choice(rezultate_posibile)
+print("3rd zar: " + str(rezultate3))
+rezultate4 = random.choice(rezultate_posibile)
+print("4th zar: " + str(rezultate4))
+rezultate5 = random.choice(rezultate_posibile)
+print("5th zar: " + str(rezultate5))
+rezultate6 = random.choice(rezultate_posibile)
+print("6th zar: " + str(rezultate6))
+rezultate = random.choice(rezultate_posibile)
+print("\n")
+
+
+
+
+def factorial(x):
+    if x==1:
+        return 1
+    else:
+        return (x*factorial(x-1))
+
+num = int(input("introdu numarul pt fact"))
+print("Factorialul", num, "este", factorial(num))
+
+print("\n")
+
+
+x=12
+y=8
+while(x != y):
+ if x>y:
+    x=x-y
+ else:
+    y=y-x
+    
+print("cmmdc este: ", x)
+
+
+def cmmdc(x, y):
+    if x != y:
+        if x > y:
+            return (cmmdc(x-y, y))
+        else:
+            return (cmmdc(x, y-x))
+    else:
+        return print(x)
+        
+n=int(input("Primul numar: "))
+m=int(input("Al doile numar: "))
+cmmdc(n, m)
