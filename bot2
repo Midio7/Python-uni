@@ -1,0 +1,14 @@
+import pyautogui
+import time
+import keyboard
+
+def coordonate():
+    print(pyautogui.position())
+
+while not keyboard.is_pressed('esc'):
+    coordonate()
+
+
+col = 1
+
+time.sleep(5)
