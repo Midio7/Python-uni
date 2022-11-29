@@ -1,0 +1,77 @@
+class Student:
+    def __init__(self, index, name, medie):
+        self.name = name
+        self.medie = medie
+        self.index=index
+
+    def BinarySearch():
+            media_cautata = int(input("Introduceti media cautata: "))
+            if media_cautata > 10 or media_cautata < 1:
+                print("Introduceti o medie valida")
+                Student.BinarySearch()
+            low = 0; high = 10; mid = 0
+           
+            while low <= high:
+                mid = (high + low) // 2 #//ca sa rotunjeasca nr
+               
+                if student[mid].medie < media_cautata:
+                    low = mid + 1
+                elif student[mid].medie > media_cautata:
+                    high = mid - 1
+                else:
+                    return student[mid].name
+
+    def SequentialSearch():
+        numelecautat = input("Introduceti numele studentului cautat: ")
+        K=0
+        for i in student:
+            if i.name == numelecautat:
+                print("Studentul a fost gasit!" + "\nNume: " +i.name + "\nMedia: "+ str(i.medie))
+                k=1
+        if k == 0:
+            print("Studentul cautat nu exista :(")
+
+
+
+
+
+
+
+
+student = []
+
+student.append(Student(1, "Alexander", 1))
+student.append(Student(2, "Bob", 2))
+student.append(Student(3, "Midio", 3))
+student.append(Student(4, "BOY", 4))
+student.append(Student(5, "MILFEN", 5))
+student.append(Student(6, "Ross", 6))
+student.append(Student(7, "Django", 7))
+student.append(Student(8, "Zhin", 8))
+student.append(Student(9, "Rei", 9))
+student.append(Student(10, "Nerd", 10))
+
+
+#s1=Student(1, 'Alexander', 1)
+#s2=Student(2, 'Bob', 2)
+#s3=Student(3, 'Midio', 3)
+#s4=Student(4, 'Milfen', 4)
+#s5=Student(5, 'BOY', 5)
+#s6=Student(6, 'Ross', 6)
+#s7=Student(7, 'Dafnaria', 7)
+#s8=Student(8, 'Django', 8)
+#s9=Student(9, 'Zeus', 9)
+#s10=Student(10, 'Zhin', 10)
+
+
+comanda = int(input("Scrieti numarul corespunzator tipului de cautare: \n 0 - inchide programul\n1 - Dupa medie\n2 - Dupa nume\n"))
+
+while comanda != 0:
+    if comanda == 1:
+        print("Studentul cu media cautata  este: " + str(Student.BinarySearch()))
+    if comanda == 2:
+        Student.SequentialSearch()
+    comanda = int(input("Scrieti numarul corespunzator tipului de cautare: \n 0 - inchide programul\n1 - Dupa medie\n2 - Dupa nume\n"))
+
+#Student.BinarySearch()
+
