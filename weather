@@ -1,0 +1,24 @@
+import requests
+import json
+API_KEY = "cb972d56b7d21c078df7e0da12e23558"
+BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
+city = input("INTRODU NUMELE ORASULUI")
+request_url = f"{BASE_URL}?APPID={API_KEY}&q={city}"
+
+rasp = requests.get(request_url)
+data = json.loads(rasp.text)
+print(data)
+
+
+#if rasp.status_code == 200:
+#    data=rasp.json()
+#    vremea = data['weather'][0]['description']
+#    temp = round(data["main"]["temp"]-273.15, 2)
+#    print("Vremea: ", vremea)
+#    print("Temperatura: ", temp, " C")
+#else:
+#    print("Avem o eroare >:( ")
+
+
+
+
