@@ -30,6 +30,34 @@ def square():
     equation.set(resultsqrt)
     exrpession = ""
     
+def sin():
+    global exrpession
+    resultsin = math.sin(int(exrpession))
+    equation.set(resultsin)
+    exrpession = ""
+
+def cos():
+    global exrpession
+    resultcos = math.cos(int(exrpession))
+    equation.set(resultcos)
+    exrpession = ""
+
+def tan():
+    global exrpession
+    resulttan = math.tan(int(exrpession))
+    equation.set(resulttan)
+    exrpession = ""
+
+def ln():
+    global exrpession
+    resulttan = math.log(int(exrpession))
+    equation.set(resulttan)
+    exrpession = ""
+
+def clear():
+    global exrpession
+    exrpession = ""
+    equation.set("")
     
 
 
@@ -37,7 +65,7 @@ if __name__ == "__main__":
     gui = Tk()
     gui.configure(background = "#abdbe3" )
     gui.title("THE CALCULATOR B)")
-    gui.geometry("265x155")
+    gui.geometry("265x240")
     equation = StringVar()
     exrpession_field = Entry(gui, textvariable=equation)
     exrpession_field.grid(columnspan=4, ipadx=70)
@@ -60,7 +88,7 @@ if __name__ == "__main__":
     multi.grid(row = 4, column = 3)
     divi = Button(gui, text = ' / ', fg = 'black', bg = 'red', command=lambda: press("/"), height = 1, width = 7)
     divi.grid(row = 5, column = 3)
-    sqrt = Button(gui, text = ' √ ', fg = 'black', bg = 'red', command =square,  height = 1, width = 7)
+    sqrt = Button(gui, text = ' √ ', fg = 'black', bg = 'red', command = square,  height = 1, width = 7)
     sqrt.grid(row = 6, column = 2)
     button6 = Button(gui, text = '6', fg = 'black', bg = 'red', command=lambda: press(6), height = 1, width = 7)
     button6.grid(row = 3, column = 2)
@@ -73,7 +101,23 @@ if __name__ == "__main__":
     button0 = Button(gui, text = '0', fg = 'black', bg = 'red', command=lambda: press(0), height = 1, width = 7)
     button0.grid(row = 5, column = 1)
 
+    clear = Button(gui, text = 'CLEAR ALL', fg = 'black', bg = 'red', command=clear, height = 1, width = 7)
+    clear.grid(row = 7, column = 3)
+
+    sin = Button(gui, text = 'sin', fg = 'black', bg = 'red', command=sin, height = 1, width = 7)
+    sin.grid(row = 6, column = 0)
+    cos = Button(gui, text = 'cos', fg = 'black', bg = 'red', command=cos, height = 1, width = 7)
+    cos.grid(row = 7, column = 0)
+    tan = Button(gui, text = 'tan', fg = 'black', bg = 'red', command=tan, height = 1, width = 7)
+    tan.grid(row = 8, column = 0)
+    ln = Button(gui, text = 'ln', fg = 'black', bg = 'red', command=ln, height = 1, width = 7)
+    ln.grid(row = 9, column = 0)
+
+
     equal = Button(gui, text = ' = ', fg = 'black', bg = 'red', command=equalpress, height = 1, width = 7)
     equal.grid(row = 6, column = 3)
 
     gui.mainloop()
+
+
+
